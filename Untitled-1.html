@@ -1,0 +1,361 @@
+
+<!--- HTML(Hypertext markup language) case-sensitive değildir, programlama dili değildir, bir işaretleme dilidir.
+CSS bir programlama dili değildir,CSS (Cascading Style Sheets - Basamaklı Stil Şablonları), bir Stil / Biçimlendirme Dilidir (Style Sheet Language).
+class   =>  .class
+id    =>  #id
+--->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <!--
+  <base href="https://ornek.com/blog/">
+    Tarayıcı bunu otomatik olarak şu şekilde çözer: 
+       https://ornek.com/blog/resimler/logo.png
+  <img src="resimler/logo.png" alt="Logo">
+-->
+  <title>JS Bağlama Testi</title>
+  <style> /*CSS   Bu style tüm p etiketleri için geçerlidir. p etiketlerinin içinde ezilmediği sürece!*/
+    p{ 
+      font-size: 16px;
+    }
+
+    a:link{
+      color:red;
+      text-decoration:none;
+      display:inline-block;
+    }
+    a:hover{
+      color:green;
+    }
+    a:visited{
+      color:blue;
+    }
+
+    body{
+      background-color: lightskyblue;
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css"> <!-- Harici CSS dosyasını buradaki href ile çağırıyoruz -->
+<!--href: hypertext reference, rel:relationship -->
+
+</head>
+<body>
+ 
+  <a style = "background-color:white;font-size:70px;" id="myLink" href="#">Merhaba</a>
+  <p>Bu bir paragraf şeklindedir.</p>
+  <pre>
+      Bu ise yazıldığı        gibi görünür.
+
+                    Nasıl istersen.
+  </pre>
+  <!-- Harici JS dosyasını buradaki src ile çağırıyoruz -->
+ 
+  <p><strong>İşte bir kalın metin - strong.</strong></p>
+  <p><b>İşte bir kalın metin - b.</b></p>
+
+  <p><em>İşte bir italik metin - em.</em></p>
+  <p><i>İşte bir italik metin - i.</i></p>
+
+  <p><u>İşte bir alt çizgi metin </u>- u.</p>
+  <p><ins>İşte bir alt çizgi metin </ins> - ins.</p>
+
+  <p><s>İşte bir üst çizgi metin</s> - s.</p>
+  <p><del>İşte bir üst çizgi metin</del> - del.</p>
+
+  <p><mark>İşte bir vurgulu metin</mark> - mark.</p>
+  <h1>45<sup>2</sup> paragraf</h1>
+  <h1>45<sub>2</sub>paragraf</h1>
+ 
+
+<p>
+  <q>Olmak ya da olmamak, işte bütün mesele bu.</q> 
+  — <cite>Shakespeare (Hamlet)</cite>
+</p>
+
+  <p>Bu bir alıntıdır: <blockquote>Alıntı metni</blockquote></p>
+
+  <p>Projemizde <abbr title="HyperText Markup Language">HTML</abbr> kullanıyoruz. </p>
+  
+  <p>bla bla bla <address>Yazarın Adresi</address></p>
+
+  <bdo dir="rtl">Bu metin sağdan sola doğru yazılır.</bdo>
+
+
+  <p style="border: 2px solid tomato;">bla bla bla</p>
+  <p style="background-color: tomato;">bla bla bla</p>
+  <p style="background-color: rgb(255, 99, 71);">bla bla bla</p>
+  <p style="background-color: rgba(255, 99, 71, 0.5);">bla bla bla</p>
+  <p style=" background-color: #ff6347;">hexadecimal format</p>
+
+  <a href = "https://www.example.com">Example.com</a>
+  <a href = "mailto:example@example.com">Email ile iletişime geç</a>  
+
+  <img src="example.png" alt="logo">
+  
+                                        <!--MAP-->
+<img src="harita.jpg" alt="Harita" usemap="#harita-map">
+<map name="harita-map">
+  <!-- Tıklanabilir Alanlar -->
+  <area shape="rect" coords="34,44,270,350" href="sayfa1.html" alt="Dikdörtgen Alan">
+  <area shape="circle" coords="337,300,44" href="sayfa2.html" alt="Daire Alan">
+  <area shape="poly" coords="0,0,63,0,12,75,62,81" href="sayfa3.html" alt="Çokgen Alan">
+</map>
+
+
+                                      <!---PİCTURE--->
+
+<picture>
+  <source media="(min-width: 850px)" srcset="https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+  <source media="(min-width: 650px)" srcset="img/workplace.jpg">
+  <source media="(min-width: 250px)" srcset="https://images.hdqwalls.com/download/abstract-ink-4k-k5-1920x1080.jpg">
+  <img src="https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="picture desteklemiyorsa">
+</picture>
+
+
+                                        <!--TABLE-->
+<table border="1" style="border-collapse: collapse; border-spacing: 10px;">
+  <caption>Örnek Tablo</caption>
+  <thead>
+    <tr>
+      <th>Başlık 1</th>
+      <th>Başlık 2</th>
+      <th>Başlık 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Veri 1</td>
+      <td>Veri 2</td>
+      <td>Veri 3</td>
+    </tr>
+    <tr>
+      <td>Veri 4</td>
+      <td>Veri 5</td>
+      <td>Veri 6</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Alt Bilgi</td>
+    </tr>
+  </tfoot>
+</table>
+
+<br> <br>
+
+
+  <table border="1" style="border-collapse: collapse; border-spacing: 10px;">
+  <caption>Örnek Tablo</caption>
+  <thead>
+    <tr>
+      <th colspan="3">Kişisel Bilgiler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Exxxx</td>
+      <td>Axxxx</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Vxxxxx</td>
+      <td>Txxxx</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Alt Bilgi</td>
+    </tr>
+  </tfoot>
+  </table>
+  <br>
+  <br>
+
+  <table border="1" style="border-collapse: collapse; border-spacing: 10px;">
+  <caption>Örnek Tablo</caption>
+  <thead>
+    <tr>
+      <th colspan="3">Kişisel Bilgiler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">Soyisim</td>
+      <td>Veri 2</td>
+      <td>Veri 3</td>
+    </tr>
+    <tr>
+      <td>Veri 4</td>
+      <td>Veri 5</td>
+    </tr>
+  </tbody>
+</table>
+  <br>
+  <br>
+  <ul style="list-style-type: disc;">
+    <li>Liste Elemanı 1</li>
+    <li>Liste Elemanı 2<ol><li>Liste Elemanı 2.1</li><li>Liste Elemanı 2.2</li></ol></li>
+    <li>Liste Elemanı 3</li>
+  </ul>
+   <ul style="list-style-type: circle;">
+    <li>Liste Elemanı 1</li>
+    <li>Liste Elemanı 2</li>
+    <li>Liste Elemanı 3</li>
+  </ul>
+   <ul style="list-style-type: square;">
+    <li>Liste Elemanı 1</li>
+    <li>Liste Elemanı 2</li>
+    <li>Liste Elemanı 3</li>
+  </ul>
+
+<br>
+<br>
+
+<ol type="1" START="25">
+  <li>Liste Elemanı 1</li>
+  <li>Liste Elemanı 2</li>
+  <li>Liste Elemanı 3</li>
+</ol>
+<ol type="a">
+  <li>Liste Elemanı 1</li>
+  <li>Liste Elemanı 2</li>
+  <li>Liste Elemanı 3</li>
+</ol>
+<ol type="A">
+  <li>Liste Elemanı 1</li>
+  <li>Liste Elemanı 2</li>
+  <li>Liste Elemanı 3</li>
+</ol>
+<ol type="I">
+  <li>Liste Elemanı 1</li>
+  <li>Liste Elemanı 2</li>
+  <li>Liste Elemanı 3</li>
+</ol>
+<ol type="i">
+  <li>Liste Elemanı 1</li>
+  <li>Liste Elemanı 2</li>
+  <li>Liste Elemanı 3</li>
+</ol>
+
+<!--iframe (Inline Frame), bir web sayfasının içine başka bir web sayfasını, videoyu veya haritayı gömmek için kullanılan bir HTML etiketidir.-->
+<iframe frameborder="7" src="https://www.example.com" width="500" title="Blog sitem" height="300"></iframe>
+<br>
+
+<iframe name="iframe1" width="560" height="315" src="https://www.youtube.com/embed/X0I4sIybUCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://www.example.com" target="iframe1">Beni tıkla </a></p>
+
+
+<!--PİCTURE : EKRAN BOYUTUNA GÖRE GÖRSEL MASAÜSTÜ- TABLET-TELEFON - İMG ETİKETİ HİÇBİRİ SAĞLANMAZSA(ZORUNLU ETİKET)-->
+<picture>
+  <source media="(min-width: 850px)" srcset="https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+  <source media="(min-width: 650px)" srcset="img/workplace.jpg">
+  <source media="(min-width: 250px)" srcset="https://images.example.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+  <img src="https://images.pexels.com/photos/853199/pexels-photo-853199.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="picture desteklemiyorsa">  
+</picture><br><br>
+
+<hr>
+<!-- FORM -->
+<!--LABEL FOR ID İLE EŞLEŞİR-->
+    
+  <form action="değerlerial.html" method="post">
+    <label for="name">Adınız:</label>
+    <input type="text" id="name" name="name" value="readonly" readonly><br><br>
+
+    <label for="email">E-posta:</label>
+    <input type="email" id="email" name="email" value="disabled sunucuya gönderilmez" disabled required><br><br>
+
+    Type color: <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+    Type date: <input type="date" id="birthday" name="birthday" min="2019-04-04" max="2020-04-04"><br>
+    Type number: <input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+    Type range: <input type="range" id="vol" name="vol" min="0" max="11"><br>
+    Type time: <input type="time" id="appt" name="appt"><br>
+    Type url: <input type="url" id="homepage" name="homepage"><br>
+    Type week: <input type="week" id="week" name="week"><br>
+    Type file: <input type="file" id="myfile" name="myfile"><br>
+    Type search: <input type="search" id="site-search" name="q"><br>
+    <!-- 0 isteğe bağlı demek-->
+    Type tel : <input type="tel" id="phone" name="phone" pattern="0?5[0-9]{9}" placeholder="05XXXXXXXXX" required><br>
+    Type month: <input type="month" id="start" name="start" min="2018-03" max="2024-12"><br>
+    <!--RADİO-->
+    <input type="radio" id="kadın" name="cinsiyet" value="kadın" checked>
+    <label for="kadın">Kadın</label>
+    <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+    <label for="erkek">Erkek</label><br><br>
+    <!--TEXTAREA-->
+    <label for="message">Mesajınız:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    <!--CHECKBOX-->
+    <p>Bildiğiniz dilleri seçin:</p>
+
+    <input type="checkbox" id="dil_html" name="diller" value="html">
+    <label for="dil_html">HTML</label><br>
+
+    <input type="checkbox" id="dil_css" name="diller" value="css">
+    <label for="dil_css">CSS</label><br>
+
+    <input type="checkbox" id="dil_js" name="diller" value="javascript">
+    <label for="dil_js">JavaScript</label><br>
+
+    <input type="checkbox" id="dil_python" name="diller" value="python">
+    <label for="dil_python">Python</label>
+    <br><br>
+    <!--SELECT-->
+    <label for="country">Ülke:</label>
+    <select id="country" name="country" multiple>
+      <option value="tr">Türkiye</option>
+      <option value="us">Amerika Birleşik Devletleri</option>
+      <option value="uk">İngiltere</option>
+    </select>
+    <br><br>
+    <!--GRUPLAMA ETİKETİ-->
+    <fieldset>
+      
+      <legend>İletişim Tercihi</legend>
+      <input type="radio" id="telefon" name="iletisim" value="telefon">
+      <label for="telefon">Telefon</label><br>
+
+      <input type="radio" id="email_tercih" name="iletisim" value="email">
+      <label for="email_tercih">E-posta</label><br>
+
+      <input type="radio" id="posta" name="iletisim" value="posta">
+      <label for="posta">Posta</label>
+     </fieldset>
+     <fieldset>
+      <!--DATALİST : Kullanıcıya yazı yazarken seçenek göstermek içindir.-->
+      <label for="sehir">Şehir seçin veya yazın:</label>
+    <!-- list="sehirler" diyerek aşağıdaki datalist'e bağlıyoruz -->
+    <input type="text" id="sehir" list="sehirler">
+    <!-- Kullanıcının göreceği öneri listesi -->
+    <datalist id="sehirler">
+      <option value="İstanbul">
+      <option value="Ankara">
+      <option value="İzmir">
+    </datalist>
+  </fieldset>
+
+    <br>
+    <button type="submit">Gönder</button>
+    <button type="reset">Sıfırla</button>
+    <button type="button" onclick="alert('Butona tıklandı!')">Tıkla</button>
+  </form>
+
+
+<a style="background-color:white; font-size:70px;" href="#myLink">Başa dön.</a>
+<hr> 
+<hr>
+
+
+
+
+<script src="calisma.js"></script>
+</body>
+</html>
