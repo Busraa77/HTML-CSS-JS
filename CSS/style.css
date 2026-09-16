@@ -1,0 +1,148 @@
+/*Cascading Style Sheets : Basamaklı Stil Şablonları
+CSS kurallarının yukarıdan aşağıya doğru birbirini ezmesi ve en alttaki en geçerli kuralın uygulanması mantığından gelir.
+
+
+Syntax =>   property : value ;
+
+
+3 WAYS TO INSERT CSS
+1. Inline CSS : <h1 style="color:blue;">This is a heading</h1>
+2. Internal CSS : <style> h1 {color:blue;} </style> 
+3. External CSS : <link rel="stylesheet" href="style.css">
+
+
+ÖNCELİK SIRASI
+1. Inline style
+2. Internal and External style sheets eşit önceliğe sahiptir. En alttaki kural geçerlidir.
+3. İstisna Kuralı (!important): (örneğin color: black !important;), yukarıdaki tüm öncelik zincirini kırar ve en baskın stil haline gelir.
+
+
+
+CSS COLORS
+1.RGB : Her renk kanalı 0 ile 255 arasında bir tam sayı alır (0 = ışık tamamen kapalı, 255 = ışık sonuna kadar açık).
+
+2.HEX : RGB'nin 16'lık tabandaki sıkıştırılmış halidir. Başında # işareti bulunur ve 6 karakterden oluşur.
+        (10=A, 11=B, 12=C, 13=D, 14=E, 15=F)
+        İlk 2 karakter: Kırmızı (R)
+        Ortadaki 2 karakter: Yeşil (G)
+        Son 2 karakter: Mavi (B)
+
+3.HSL (Hue, Saturation, Lightness)
+        H (Hue - Renk Özü): Renk çarkındaki açısal derecedir (0° – 360°).
+        S (Saturation - Doygunluk): Rengin ne kadar canlı olacağını belirler (0% – 100%(canlı renk)).
+        L (Lightness - Açıklık/Parlaklık): Rengin aydınlık düzeyidir (0% – 100%). : %0 zifiri siyah, %50 ideal renk tonu, %100 bembeyaz.
+
+    RGB TO HEX
+    Formül (Her renk kanalı için ayrı ayrı uygulanır)
+    Sayıyı 16'ya bölün. Bölüm sonucu ilk basamağı verir. Kalan sayı ikinci basamağı verir. 
+    Örnek: rgb(220, 20, 60) 
+        Adım: Kırmızı 220/16 = 13(kalan 12)
+        Kırmızı kodu: DC
+
+a: Alfa değeri 0 ile 1 arasında ondalıklı bir sayı. 0 tamamen şeffaf,görünmez.
+
+NOTE   
+
+        16'lık taban, bilgisayarın içindeki 8 bitlik elektrik sinyallerini insanın okuyabileceği en kayıpsız ve doğrudan formatta temsil etme yoludur.
+        !!!!--- 10'luk taban ile 2'lik taban birbirine tam oturmaz.
+        Ancak 16 sayısı, 2'nin 4. kuvvetidir. Bu sayede tam 4 bit, 16'lık sistemde tam 1 karaktere karşılık gelir.
+        8 bit (1 Byte) = Tam olarak 2 Hex karakteridir.
+        00000000 => 00
+        11111111 => FF
+
+
+
+*/
+
+body{
+    background-color: teal;
+    background-image: url('manzara.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*scroll dersek sayfa kaydıkça akıp gider.*/
+    /*background: url('arkaplan.png') no-repeat center / cover fixed;*/
+}
+/*                                      BORDER PROPERTIES                                 */
+.h1-1{
+    border:7px dotted rgb(255,99,71);
+    border-style : ridge inset outset none;
+}
+
+.h1-2{
+    border: solid rgb(255,99,71,0.7);
+    border-width: 10px 2px ; 
+    /*üst, sağ, alt, sol sırasında değerler verilir. 
+    sol yoksa sağ ile aynı olur.
+    alt yoksa üst ile aynı olur.
+    sağ yoksa üst ile aynı olur.*/
+    border-bottom : 2px solid green;
+    /*Genişlik varsayılanı: medium (~3px)
+    Stil varsayılanı: none (Görünmez / Yok)*/
+}
+
+.h1-3{
+    border: 3px dashed rgb(255,99,71);
+}
+.h1-4{
+    /*Bir piksel ekran üzerinde iki ayrı çizgi ve aralarında bir boşluk gösterebilmek için en az 3 piksele ihtiyaç vardır*/
+    border: 3px double rgb(255,99,71);
+}
+.h1-5{
+    border: 3px groove rgb(255,99,71);
+    border-bottom-right-radius: 10px; /*Köşeleri yuvarlatır. Yarıçapı ne kadar büyük olursa o kadar yuvarlak olur.*/ 
+}
+
+
+.div-1{
+    border: 3px solid rgb(255,99,71);
+    border-radius: 10px; /*Köşeleri yuvarlatır. Yarıçapı ne kadar büyük olursa o kadar yuvarlak olur.*/ 
+    margin : 50px; /*Dış boşluk*/
+    padding : 20px; /*İç boşluk*/
+    
+}
+.div-2{
+    border: 2px solid blue;
+    height:305px;
+    margin:auto;
+    width:50%;
+
+    outline:auto;
+    box-shadow :5rem 4rem rgb(30, 153, 36);
+
+    cursor: pointer;
+
+}
+
+.div-2 p{
+    text-align:center;
+    line-height:25px; /*Satır yüksekliği*/
+    font-size : 2rem;
+    
+    /*direction Arapça veya İbranice gibi sağdan sola yazılan dillerin akışını ve noktalama işaretlerini ayarlar; 
+    Latin harflerini tersine çevirmez çünkü tarayıcının yerleşik iki yönlü metin algoritması (Unicode Bidirectional Algorithm) 
+    Latin karakterlerinin soldan sağa yazıldığını bilir ve harf sırasını korur.
+    
+    unicode-bidi: bidi-override;: Tarayıcının akıllı Unicode sıralama algoritmasını devre dışı bırakır (geçersiz kılar/override eder) ve karakterleri hangi dilde olduğuna bakılmaksızın katı bir şekilde sağdan sola tek tek dizer.
+
+    */
+    direction:rtl;
+    unicode-bidi: bidi-override;
+
+    box-sizing: border-box;
+    /*BOX SIZING : bir elemanın genişlik (width) ve yükseklik (height) hesaplamasına iç boşluk (padding) ve kenarlık (border) kalınlıklarını da dahil eden CSS kuralıdır.*/
+
+    text-decoration: underline;
+
+    text-transform: lowercase;
+    text-transform: capitalize;
+
+    text-indent:1rem; /*paragraf başı girintisi ekler.*/
+
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    white-space: inherit;
+
+    text-shadow : 3px 3px red;
+
+}
