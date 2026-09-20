@@ -1,0 +1,162 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-bar{
+    width: 100vw;
+    background-color:#3d5467;
+    color:#da4167;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    font-size: 3rem;
+    padding:1rem;
+    text-transform: uppercase;
+    flex-grow:1;
+}
+
+.menu{
+      flex-grow:3;
+}
+.menu ul{
+    list-style: none;
+    color:#da4167;
+    text-transform: capitalize;
+    display:flex;
+    justify-content: space-around;
+}
+.menu ul li{
+    flex-grow:1;
+}
+.menu ul li a{
+    color:inherit;
+    font-size:1.2rem;
+    text-decoration: none;
+
+}
+
+.banner{
+width: 100vw;
+background : url('public/microsoft-copilot-qUJ8fgoaLTg-unsplash.jpg') no-repeat;
+background-size:cover;
+}
+
+.banner-text{
+padding:20px;
+min-height:30rem;
+line-height:2.5rem;
+/* İçindeki .banner-text-item'ı tam merkeze kilitlemek için: */
+  display: flex;
+  justify-content: center; /* Yatay ortalama */
+  align-items: center;     /* Dikey ortalama */
+}
+
+.banner-text-item{
+    
+    font-size: 1.5rem;
+    margin:auto;
+    text-align: center;
+    color: #da4167;
+    width:70%;
+    
+}
+
+.banner-text-item h2{
+    font-size: 3rem;
+    color:#3d5467;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-content{
+    width: 100vw;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.main-item{
+    text-align: center;
+    padding:10px;
+    flex:1 1 0;
+    min-width:0;
+
+}
+.main-item h2{
+    color:#da4167;
+    line-height:2.5rem;
+
+}
+.main-item p{
+    line-height:1.8rem;
+}
+
+.form-container{
+    background-color: #3d5467;
+    height:auto;
+    width:100vw;
+}
+
+.form-container h2{
+    text-align:center;
+    padding:1rem;
+    color:white;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+.form input,.form textarea,.form button{
+
+    margin:1rem;
+    padding:1rem;
+    border-radius:.5rem ;
+    border:1px solid #da4167;
+    width:70%;
+    min-height:3rem;
+}
+.form button{
+    width:10rem;
+    height:3rem;
+    line-height:1.2rem;
+    background-color:#da4167;
+    font-size:1.2rem;
+    text-align: center;
+    color:white;
+
+}
+
+@media all and (max-width:600px){
+.nav-bar{
+        flex-direction: column;
+        text-align:center;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul li{
+        padding:.3rem;
+    }
+    .banner h2{ 
+        font-size:2rem;
+    }
+    .main-content{
+        flex-direction:column;
+    }
+}
+@media(max-width:1440){
+    
+}
