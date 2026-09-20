@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-size:32px;
+            height:200vh;
+            margin:1rem;
+            border:2px solid red;
+        }
+
+        .parent{
+            border:2px solid blue;
+            padding:2rem;
+            background-color: chocolate;
+        }
+
+        .item1{
+            padding:2rem;
+            background-color: darkmagenta;
+            position:relative;
+            top:20px;
+            right:-20px;
+            z-index:1;
+        }
+        .item2{
+            padding:2rem;
+            background-color: teal;
+            position:absolute;
+            top:15px;
+            right:2px;
+            z-index:2;
+
+        }
+        .item3{
+            padding:2rem;
+            background-color: gold;
+            position:fixed;
+            bottom:10px;
+
+
+        }
+        .item4{
+            position:sticky;
+            top:20px;
+        }
+/***********************************/
+        .top{
+            display:flex;
+            justify-content: center; /* items kutusunu yatayda ortalar */
+            align-items: center;
+            margin:15px;
+        }
+        .parent-item{
+            background-color: pink;
+            width:400px;
+            height:400px;  
+            position:relative;
+
+            
+        }
+        .items{
+            position:absolute;
+            top:10px;
+            left:20px;
+
+        }
+/***********************************/
+
+.my-items{
+    background-color: rgb(36, 132, 216);
+}
+
+.my-item1{
+    z-index: 1;
+
+}
+.my-item2{
+    z-index: 2;
+}
+
+    </style>
+</head>
+<div>
+    <div class="parent">
+        Ana Taşıyıcı
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item4">Item 4 </div>        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+        <div >Item </div>
+    
+        <div class="item3">Item 3</div>
+    </div> 
+    
+    <div class="top">
+     <div class="parent-item"><div class="items">
+        İtem
+    </div> </div></div>
+
+
+     <div class="my-parent">
+        <div class="my-items">
+        <div class="my-item1">Item 1</div>
+        <div class="my-item2">Item 2</div>
+        <div class="my-item4">Item 4 </div>  
+        <div class="my-item3">Item 3</div></div>
+    </div> 
+
+    
+</body>
+</html>
