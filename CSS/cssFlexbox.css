@@ -1,0 +1,219 @@
+.p{
+    background-color: aliceblue;
+    display:inline-block;
+    padding:0.3rem 0.3rem;
+    margin:0.3rem;
+}
+.container{
+    background-color:rgb(155, 54, 155) ;
+
+}
+
+#float{
+
+width: 10rem;
+}
+
+.floatimg{
+    height:17rem;
+    float:left;
+}
+.floatimg2{
+
+    float:right;
+    height:35rem;
+    margin-bottom: 10px;
+}
+
+.floatline{
+    clear:both;
+    clear:left; /*soldaki resmin altına gider.*/
+}
+
+
+.newcontainer{
+    clear:both;
+    height:500px;
+    width:100%;
+    background-color: aliceblue;
+    border:1px solid black;
+
+    display:flex;
+    flex-direction: row; /* x ekseninde dizilir.*/
+    align-items: stretch; /*varsayılan*/
+    align-content:space-evenly;
+    flex-wrap: no-wrap;
+}
+
+.item{
+    min-height:50px;
+    /*flex: 1 1 0;           /* 1: Eşit paylaş, 1: Küçülmeye zorla, 0: Başlangıç payını sıfırla */
+    min-width: 0;          /* KİLİT NOKTA: Küçülme sınırını kaldırır, taşmayı engeller */
+    background-color: yellow;
+    border:1px solid black;
+    margin:10px;
+}
+
+.item1{
+flex-grow:0; /*boşlukları dağıtıyor. */
+
+}
+
+.item2{
+    /*flex-grow ile flex-shrink asla aynı anda devrede olamaz. basis 0 ise shrink çalışmaz.*/
+flex-grow :2;
+flex-basis:0;
+
+}
+
+.item3{
+flex-grow:1;
+flex-basis:0;
+}
+
+.item4{
+    flex-grow:2;  
+}
+
+
+.gridcontainer{
+    display: grid;
+    /*auto yerine 1fr yazmak daha kararlıdır.*/
+   /*
+    grid-template-columns: 4rem 1fr 4rem;
+    grid-template-rows: repeat(3,10rem); /*10rem 10rem 10rem;*/
+    
+    grid-template: repeat(3,10rem)/4rem 1fr 4rem;
+    font-size:2rem;
+    align-content: center;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    /*gap:0.5rem;*/
+
+}
+.gridcontainer div{
+    align-content: center;
+    text-align: center;
+}
+/*.gridcontainer içindeki div etiketlerini.*/
+.gridcontainer div:nth-child(1n){
+    background-color:#96ceb4;
+
+}
+.gridcontainer div:nth-child(3n){
+    background-color: #88d8b0;
+}
+
+.gridcontainer div:nth-child(2n){
+ background-color: #ff6f69;   
+}
+.gridcontainer div:nth-child(4n){
+    background-color: #ffcc5c;
+}
+
+
+
+.layout{
+    display:grid;
+    min-height: 100vh;
+    /* Sütunlar: Soldaki menü 13rem, ana içerik kalan tüm boşluk (1fr) */
+    grid-template-columns: 13rem 1fr;
+
+  grid-template-rows: 0.5fr 4fr 0.5fr;
+
+
+
+/* Sayfanın kuşbakışı krokisi . dağıtılacak biletler gibi düşün*/
+  grid-template-areas:
+    "header  header"
+    "menu content"
+    "footer  footer";
+
+    gap:12px;
+    padding:12px;
+
+
+}
+
+.header{
+    grid-area: header;
+    background-color: #88d8b0;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 0 24px;;
+
+    /* Header içindeki logo ve linkleri Flexbox ile iki uca yaslıyoruz */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu{
+    grid-area: menu;
+    background-color: #ff6f69;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 0 24px;;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    grid-area: content;
+    background-color:#ffcc5c;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 0 24px;;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    grid-area:footer;
+    background-color: #88d8b0;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 0 24px;;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.layout-2{
+    display:grid;
+    gap:3px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 40px 240px 40px;
+}
+
+.header-2{
+    /*Farklı yazımlar
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-column: 1/ 13; */
+    grid-column: 5/-1;
+    background-color: #88d8b0;
+    padding:12px;
+}
+
+.menu-2{
+    grid-row: 1/3;
+    grid-column: 1/ span 4;
+    background-color: #ff6f69;
+}
+
+.content-2{
+    grid-column: 5/-1;
+    background-color: #ffcc5c;
+}
+.footer-2{
+    grid-column: 1/span 12;
+    background-color: #88d8b0;
+}
