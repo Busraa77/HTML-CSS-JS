@@ -1,0 +1,30 @@
+.container{
+    display:grid;
+    gap:5px;
+    /*Bir kutunun genişliği asla 201px değerinin altına inemez. Eğer satırda fazladan boş yer kalırsa, o boşluğu da kutulara eşit paylaştır (1fr)*/
+    grid-template-columns: repeat(auto-fit,minmax(201px,1fr));
+    /*Kendiliğinden açılan her yeni satırın yüksekliği kesinlikle 201px olsun*/
+    grid-auto-rows:201px;
+    grid-auto-flow: row dense;
+}
+
+.v{
+    grid-row:span 2;
+}
+.h{
+    grid-column: span 2 ;
+
+}
+
+.b{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+ img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+ }
+ .olcekle{
+    grid-row:span 1;
+ }
