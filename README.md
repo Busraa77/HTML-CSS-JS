@@ -1,4 +1,4 @@
-** CSS/ANASAYFA Çalışması
+## CSS/ANASAYFA Çalışması
 
 Responsive anasayfa tasarımı. 
 
