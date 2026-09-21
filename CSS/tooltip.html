@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+    
+    *, *::before,*::after{
+        box-sizing: border-box;
+    }
+    body{
+        margin-top:300px;
+        font-size: 2rem;
+    }
+
+    [data-tooltip]{
+        background-color: rgb(151, 17, 73);
+        position:relative;
+        display:inline-block;
+    }
+
+    [data-tooltip]:hover::before{
+        content: attr(data-tooltip);
+        position:absolute;
+         /* top: -100%; Elemanın üst kenarını butonun EN ALTINA yapıştırır */
+        top:0;
+         left:50%;
+        transform: translate(-50%,calc(-100% - 16px));
+        background-color: #333;
+        border-radius: .3rem;
+        color:white;
+        width:max-content;
+        max-width:100%;
+        padding:.5rem;
+
+        }
+        [data-tooltip]:hover::after{
+            content:'';
+            color:white;
+            position:absolute;
+            top:0;
+            left: 50%;
+            transform: translate(-50%, calc(-100% - 5px));
+            /* Üçgen ok yapısı */
+            border: 8px solid transparent;
+            border-bottom-color: rgb(89, 50, 126);
+        }
+
+    </style>
+</head>
+<body>
+    <span class="tooltip" data-tooltip="1-2-3-4-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit.is officia consequuntur nesciunt, illum distinctio? Quo, maiores!</span>
+</body>
+</html>
