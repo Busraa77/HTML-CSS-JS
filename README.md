@@ -16,3 +16,8 @@ Grid kullanılarak foto galeri örneği yapıldı.
 
 ## CHECKBOX TASARIM
 <img width="181" height="201" alt="image" src="https://github.com/user-attachments/assets/906a7ce6-c0e1-4e07-b404-6455f1d43a9c" />
+
+
+## TOOLTİP
+
+<img width="380" height="311" alt="image" src="https://github.com/user-attachments/assets/98fdbffb-2c0b-455b-8e78-bf68a1c5ecd9" />
